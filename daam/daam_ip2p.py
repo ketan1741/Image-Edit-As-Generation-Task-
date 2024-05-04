@@ -3,14 +3,11 @@ from diffusers import StableDiffusionPipeline
 from diffusers import StableDiffusionInstructPix2PixPipeline
 from PIL import Image
 
-
-print("HI")
-
 model = StableDiffusionInstructPix2PixPipeline.from_pretrained("timbrooks/instruct-pix2pix")
 # model = StableDiffusionPipeline.from_pretrained('stabilityai/stable-diffusion-2-base')
 model = model.to('cuda')
 
-input_img = Image.open("dataset/1_a.jpg")
+input_img = Image.open("dataset_folder/1_a.jpg")
 
 from matplotlib import pyplot as plt
 import numpy as np
